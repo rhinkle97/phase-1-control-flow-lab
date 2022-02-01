@@ -1,37 +1,31 @@
-function scuberGreetingForFeet(ride){
-  let result
+let result
+
+function scuberGreetingForFeet(ride) {
   if (ride <= 400) {
-    result = 'This one is on me!';
+    result = 'This one is on me!'
+    return result;
   }
-  if (ride > 2000) {
-    result = 'I will gladly take your thirty bucks.';
+  else if (ride > 2000 && ride < 2500) {
+    result = 'I will gladly take your thirty bucks.'
+    return result;
   }
-  if (ride > 2500) {
-    result = 'No can do.';
-  }
-  return result;
+  else (ride > 2500)
+    result = 'No can do.'
+    return result;
 }
 
 function ternaryCheckCity(city) {
-  let result
-  if (city === 'NYC') {
-    result = 'Ok, sounds good.';
-  }
-  else result = 'No go.';
-
+  city === 'NYC' ? (result = 'Ok, sounds good.') : (result = 'No go.');
   return result;
 }
 
-function switchOnCharmFromTip(tip){
-  let result
-  if (tip === 'generous') {
-    result = 'Thank you so much.';
+function switchOnCharmFromTip(tip) {
+  switch(tip) {
+  case 'generous' : result = 'Thank you so much.';
+  break;
+  case 'not as generous' : result = 'Thank you.';
+  break;
+  default : result = 'Bye.';
   }
-  else if (tip === 'not as generous') {
-    result = 'Thank you.';
-  }
-  else if (tip === 'thanks for everything') {
-      result = 'Bye.';
-    }
   return result;
 }
